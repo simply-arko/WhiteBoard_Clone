@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_drawing_view_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/background_drawing_view_layout"
+        android:padding="1dp"
+
+        app:layout_constraintBottom_toTopOf="@id/ib_brush"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Background image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image" />
+
+        <com.example.drawingapp.DrawingView
+            android:id="@+id/drawing_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80FFFFFF" />
+
+    </FrameLayout>
+
+
+    <ImageButton
+        android:id="@+id/ib_gallery"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_gallery"
+        android:scaleType="fitXY"
+        android:background="@drawable/ic_pallet_skin"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ib_eraser"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ib_eraser"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/ic_pallet_skin"
+        android:onClick="eraserClick"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_eraser"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ib_brush"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/ib_gallery" />
+
+    <ImageButton
+        android:id="@+id/ib_brush"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/ic_pallet_skin"
+        android:contentDescription="brush image"
+        android:onClick="brushClick"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_brush"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_colorPallet"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/ib_eraser" />
+
+    <Button
+        android:id="@+id/btn_colorPallet"
+
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/ic_pallet_black"
+        android:contentDescription="pallet image"
+        android:onClick="palletClick"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ib_brush"
+        tools:layout_editor_absoluteY="768dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
