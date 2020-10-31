@@ -24,8 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="Background image"
-            android:scaleType="centerCrop"
-            android:src="@drawable/image" />
+            android:scaleType="centerCrop" />
 
         <com.example.drawingapp.DrawingView
             android:id="@+id/drawing_view"
@@ -37,18 +36,48 @@
 
 
     <ImageButton
+        android:id="@+id/ib_save"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/ic_pallet_white"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_save"
+        android:onClick="saveClick"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ib_gallery"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
         android:id="@+id/ib_gallery"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="5dp"
-        android:src="@drawable/ic_gallery"
-        android:scaleType="fitXY"
         android:background="@drawable/ic_pallet_white"
+        android:onClick="galleryBtnClicked"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_gallery"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ib_undo"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/ib_save" />
+
+    <ImageButton
+        android:id="@+id/ib_undo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/ic_pallet_white"
+        android:onClick="undoClick"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_undo"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/ib_eraser"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@id/ib_gallery" />
 
     <ImageButton
         android:id="@+id/ib_eraser"
@@ -57,13 +86,13 @@
         android:layout_margin="3dp"
         android:background="@drawable/ic_pallet_white"
         android:onClick="eraserClick"
-        android:src="@drawable/ic_eraser"
         android:scaleType="fitXY"
+        android:src="@drawable/ic_eraser"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/ib_brush"
         app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@id/ib_gallery" />
+        app:layout_constraintStart_toEndOf="@id/ib_undo" />
 
     <ImageButton
         android:id="@+id/ib_brush"
