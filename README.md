@@ -4,11 +4,15 @@ You ca choose form *8 different colors* and *3 differnt bruch sizes*. And yeah t
 
 ## Some Screenshots:
 ---
-![index image](https://github.com/simplyarko/WhiteBoard_Clone/blob/main/ScreenShots/screenShot2.png?raw=true)
+![index image](https://github.com/simplyarko/WhiteBoard_Clone/blob/main/ScreenShots/SS1.png?raw=true)
 
 ---
 
-![inde image](https://github.com/simplyarko/WhiteBoard_Clone/blob/main/ScreenShots/screen_shot1.png?raw=true)
+![index image](https://github.com/simplyarko/WhiteBoard_Clone/blob/main/ScreenShots/SS2.png?raw=true)
+
+![index image](https://github.com/simplyarko/WhiteBoard_Clone/blob/main/ScreenShots/SS3.png?raw=true)
+
+![index image](https://github.com/simplyarko/WhiteBoard_Clone/blob/main/ScreenShots/SS4.png?raw=true)
 
 ---
-I'm currently working on the gallery button!
+
